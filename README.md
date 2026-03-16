@@ -2,10 +2,6 @@
 
 A clean, modern, and responsive portfolio website built with HTML and CSS.
 
-[![Status](https://img.shields.io/badge/status-in%20progress-2563eb)](#project-status)
-[![Built With](https://img.shields.io/badge/built%20with-HTML%20%26%20CSS-0f172a)](#tech-stack)
-[![License](https://img.shields.io/badge/license-MIT-16a34a)](#license)
-
 ## Overview
 
 This project is part of a structured portfolio build plan. The goal is to create a polished personal website that showcases:
@@ -29,9 +25,10 @@ Planned sections:
 - About
 - Skills
 - Projects
+- Experience
 - Contact
 - Footer
-- Responsive layouts (tablet and mobile)
+
 
 ## Tech Stack
 
@@ -54,7 +51,7 @@ portfolio/
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/HaymiG/portfolio.git
+git clone https://github.com/HaymiG/project_portfolio.git
 ```
 
 2. Open the project folder:
@@ -91,11 +88,7 @@ You can deploy this portfolio on:
 - Netlify
 - Vercel
 
-## License
 
-This project is licensed under the MIT License.
-
-If you plan to keep the MIT badge, add a `LICENSE` file to the repository.
 
 ## Author
 
