@@ -1,238 +1,406 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Haymanot Getachew — CS&E Student and Software Developer portfolio." />
   <title>Haymi_G</title>
-  <link rel="stylesheet" href="style.css" type="text/css">
-  <link rel = "icon" href = icon.png type = "image/x-icon">
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <!-- Navigation -->
-  <nav class="navbar">
-    <a href="#" class="logo">Haymi_G</a>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">Haymi_G<span class="logo-dot">.</span></a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="nav-hamburger"><span></span><span></span><span></span></label>
+      <ul class="nav-menu">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
   </nav>
-  <!-- Hero Section -->
-  <section id="home" class="hero">
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-animation"></div>
     <div class="hero-content">
-      <p class="greeting">Hello👋, I'm</p>
-      <h1>Haymanot Getachew</h1>
-      <h2>Computer Science And Engineering Student</h2>
-      <p class="tagline">
-      Developer | ML Enthusiast | Problem Solver
-      
-      I build modern, responsive web applications and love turning creative ideas into real, impactful digital experiences
-      through clean and efficient code.
-</p>
+      <p class="hero-greeting">👋 Hello, I'm</p>
+      <h1 class="hero-name">Haymanot Getachew</h1>
+      <div class="hero-title-wrapper">
+        <span class="hero-title">Computer Science &amp; Engineering Student | Software Developer | AI Enthusiast </span>
+        <span class="typing-cursor"></span>
+      </div>
+      <!-- <p class="hero-location">&#128205; Addis Ababa, Ethiopia</p> -->
       <div class="hero-buttons">
-        <a href="#projects" class="btn btn-primary">View My Work</a>
-        <a href="#contact" class="btn btn-outline">Contact Me</a>
+        <a href="#projects" class="btn btn-primary"> View Projects</a>
+        <a href="#contact" class="btn btn-outline"> Get in Touch</a>
+      </div>
+      <div class="hero-social">
+        <a href="https://github.com/HaymiG" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+            <path
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/haymanot-getachew/" target="_blank" rel="noopener" class="social-link"
+          aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+            <path
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+          </svg>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="about">
+  <!-- ========== ABOUT ========== -->
+  <section class="section" id="about">
     <div class="container">
-      <h2 class="section-title">About Me</h2>
-      <div class="about-grid">
-        <div class="about-image">
-          <img src="image/pic.jpg" alt="Your Photo">
-        </div>
-        <div class="about-text">
-          <p>
-            I’m a passionate developer who enjoys building web applications and solving real-world problems with code. I focus on
-            writing clean, efficient, and maintainable programs while continuously improving my skills in software development and machine learning.
-          </p>
-          <p>
-          I enjoy turning ideas into real projects and sharing my work through practical applications. Currently, I’m expanding my knowledge by building projects, exploring new technologies, and growing as a developer.
-
-          </p>
-          <div class="about-stats">
-            <div class="stat">
-              <span class="stat-number">1+</span>
-              <span class="stat-label">Years Experience</span>
-            </div>
-            <div class="stat">
-              <span class="stat-number">2+</span>
-              <span class="stat-label">Projects</span>
-            </div>
-            <div class="stat">
-              <span class="stat-number">1+</span>
-              <span class="stat-label">Happy Clients</span>
-            </div>
-          </div>
+      <h2 class="section-title"> About Me</h2>
+      <div class="section-divider"></div>
+      <div class="about-content glass-card">
+        <p>I am <strong>Haymanot Getachew</strong>, a 4th-year Computer Science and Engineering student at <strong>Adama
+            Science and Technology University</strong> and an <strong>A2SVian</strong> (Africa to Silicon Valley program
+          Trainee).</p>
+        <p>I am passionate about artificial intelligence, software engineering, problem solving, and building scalable systems. I enjoy turning
+          complex ideas into practical software solutions and continuously improving my technical skills while
+          collaborating on innovative technology projects.</p>
+        <div class="about-highlights">
+          <div class="highlight-item"><span class="highlight-number">4th</span><span class="highlight-label">Year
+              Student</span></div>
+          <div class="highlight-item"><span class="highlight-number">A2SV</span><span
+              class="highlight-label">Trainee</span></div>
+          <div class="highlight-item"><span class="highlight-number">3+</span><span
+              class="highlight-label">Projects</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="skills">
+  <!-- ========== SKILLS ========== -->
+  <section class="section section-alt" id="skills">
     <div class="container">
-      <h2 class="section-title">My Skills</h2>
+      <h2 class="section-title"> Skills</h2>
+      <div class="section-divider"></div>
       <div class="skills-grid">
-        <div class="skill-card">
-          <div class="skill-icon">&#9998;</div>
-          <h3>HTML &amp; CSS</h3>
-          <div class="skill-bar">
-            <div class="skill-fill" style="width: 90%;"></div>
-          </div>
+        <div class="skill-tag">
+          <svg viewBox="0 0 128 128" width="24" height="24">
+            <path fill="#3776AB"
+              d="M49.33 62h29.159C86.606 62 93 55.132 93 46.981V19.183c0-7.912-6.632-13.856-14.555-15.176-5.014-.835-10.195-1.215-15.187-1.191-4.99.023-9.612.448-13.805 1.191C37.098 6.188 35 10.758 35 19.183V30h29v4H23.776c-8.484 0-15.914 5.108-18.237 14.811-2.681 11.12-2.8 18.062 0 29.674C7.473 86.746 12.321 93 20.776 93H32V79.952c0-9.66 8.353-18.175 18.33-17.952zm-1.786-39.18c-3.07 0-5.56-2.522-5.56-5.63 0-3.122 2.487-5.654 5.56-5.654 3.059 0 5.56 2.532 5.56 5.654 0 3.108-2.501 5.63-5.56 5.63z" />
+            <path fill="#FFD845"
+              d="M91.682 28H80v12.069c0 10.063-8.727 18.931-18.33 18.931H32.67C24.618 59 18 65.894 18 73.981v27.798c0 7.912 6.89 12.564 14.555 14.861 9.174 2.748 17.975 3.244 29.073 0C68.644 114.592 72 110.652 72 101.779V93H43v-4h43.225c8.484 0 11.645-5.919 14.555-14.811 3.003-9.175 2.878-17.972 0-29.674C98.594 36.472 95.129 28 91.682 28zm-19.135 76.82c3.07 0 5.56 2.523 5.56 5.63 0 3.122-2.49 5.654-5.56 5.654-3.058 0-5.56-2.532-5.56-5.654 0-3.107 2.502-5.63 5.56-5.63z" />
+          </svg>
+          <span>Python</span>
         </div>
-        <div class="skill-card">
-          <div class="skill-icon">&#9881;</div>
-          <h3>JavaScript</h3>
-          <div class="skill-bar">
-            <div class="skill-fill" style="width: 85%;"></div>
-          </div>
+        <div class="skill-tag">
+          <svg viewBox="0 0 128 128" width="24" height="24">
+            <path fill="#659AD2"
+              d="M115.4 30.7L67.1 2.9c-.8-.5-1.9-.7-3.1-.7-1.2 0-2.3.3-3.1.7l-48 27.9c-1.7 1-2.9 3.5-2.9 5.4v55.7c0 1.1.2 2.3.9 3.4.5.8 1.2 1.5 2 2l48.2 27.9c.8.5 1.9.7 3.1.7 1.2 0 2.3-.3 3.1-.7l48-27.9c1.7-1 2.9-3.5 2.9-5.4V36.1c.1-2-.8-4.3-2.6-5.4zM64 88.7c-13.7 0-24.7-11-24.7-24.7 0-13.7 11-24.7 24.7-24.7 8.1 0 15.1 3.8 19.6 9.8l-10.2 6c-2.4-3.2-6.1-5.2-9.4-5.2-7.4 0-13.3 6.3-13.3 14.1s5.9 14.1 13.3 14.1c3.3 0 6.9-2.1 9.4-5.2l10.2 6C79.1 84.9 72 88.7 64 88.7z" />
+            <path fill="#00599C"
+              d="M100.3 67.5h-4.5v4.5h-4.5v-4.5h-4.5v-4.5h4.5v-4.5h4.5v4.5h4.5v4.5zm15-4.5h-4.5v4.5H106v-4.5h-4.5v-4.5h4.5v-4.5h4.5v4.5h4.5v4.5h.3z" />
+          </svg>
+          <span>C++</span>
         </div>
-        <div class="skill-card">
-          <div class="skill-icon">&#9883;</div>
-          <h3>React</h3>
-          <div class="skill-bar">
-            <div class="skill-fill" style="width: 80%;"></div>
-          </div>
+        <div class="skill-tag">
+          <svg viewBox="0 0 128 128" width="24" height="24">
+            <path fill="#EA2D2E"
+              d="M47.617 98.12s-4.767 2.774 3.397 3.71c9.892 1.13 14.947.968 25.845-1.092 0 0 2.871 1.795 6.873 3.351-24.439 10.47-55.308-.607-36.115-5.969zm-2.988-13.665s-5.348 3.959 2.823 4.805c10.567 1.091 18.91 1.18 33.354-1.6 0 0 1.993 2.025 5.132 3.131-29.542 8.64-62.446.68-41.309-6.336z" />
+            <path fill="#0074BD"
+              d="M69.802 61.271c6.025 6.935-1.58 13.17-1.58 13.17s15.289-7.891 8.269-17.777c-6.559-9.215-11.587-13.793 15.635-29.58 0 .001-42.731 10.67-22.324 34.187z" />
+            <path fill="#EA2D2E"
+              d="M102.123 108.229s3.529 2.91-3.888 5.159c-14.102 4.272-58.706 5.56-71.094.171-4.451-1.938 3.899-4.625 6.526-5.192 2.739-.593 4.303-.485 4.303-.485-4.953-3.487-32.013 6.85-13.743 9.815 49.821 8.076 90.817-3.637 77.896-9.468zM49.912 70.294s-22.686 5.389-8.033 7.348c6.188.828 18.518.638 30.011-.326 9.39-.789 18.813-2.474 18.813-2.474s-3.308 1.419-5.704 3.053c-23.042 6.061-67.544 3.238-54.731-2.958 10.832-5.239 19.644-4.643 19.644-4.643zm40.697 22.747c23.421-12.167 12.591-23.86 5.032-22.285-1.848.385-2.677.72-2.677.72s.688-1.079 2-1.543c14.953-5.255 26.451 15.503-4.823 23.725 0-.002.359-.327.468-.617z" />
+            <path fill="#EA2D2E"
+              d="M76.491 1.587S89.459 14.563 64.188 33.188c-20.348 14.985-4.641 23.527-.009 33.293-11.873-10.715-20.581-20.153-14.732-28.935C57.881 25.243 81.585 19.399 76.491 1.587z" />
+            <path fill="#EA2D2E"
+              d="M52.214 126.021c22.476 1.437 57-.8 57.817-11.436 0 0-1.571 4.032-18.577 7.231-19.186 3.612-42.854 3.191-56.887.874 0 .001 2.875 2.381 17.647 3.331z" />
+          </svg>
+          <span>Java</span>
         </div>
-        <div class="skill-card">
-          <div class="skill-icon">&#9879;</div>
-          <h3>Node.js</h3>
-          <div class="skill-bar">
-            <div class="skill-fill" style="width: 75%;"></div>
-          </div>
+        <div class="skill-tag">
+          <svg viewBox="0 0 128 128" width="24" height="24">
+            <path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185H1.408z" />
+            <path fill="#323330"
+              d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.176-5.468-13.763-5.468l-3.43.395c-3.295.653-6.429 2.076-8.269 4.024-5.701 5.528-4.059 15.162 2.834 19.119 6.923 4.302 17.091 5.216 18.397 9.343 1.227 5.024-3.748 6.65-8.494 6.072-3.526-.578-5.509-2.405-7.618-5.431l-9.536 5.502c1.09 2.491 2.296 3.553 4.045 5.706 8.519 8.531 29.785 8.082 33.596-4.946.136-.424 1.13-3.329.153-7.784zM69.225 26.067l-11.637-.042c.003 12.345-.012 24.678.008 37.024-.237 3.989.525 8.419-1.111 11.886-2.404 4.439-8.679 3.774-11.505 2.072-2.85-1.727-4.255-4.077-5.785-6.673l-9.617 5.884c1.674 3.433 4.145 6.396 7.396 8.25 4.855 2.823 11.36 3.543 17.234 2.07 3.842-1.133 7.125-3.648 8.837-7.3 2.604-5.146 2.041-11.447 2.075-17.389.048-12.018.004-24.039.004-36.033l.101.251z" />
+          </svg>
+          <span>JavaScript</span>
         </div>
-        <div class="skill-card">
-          <div class="skill-icon">&#128202;</div>
-          <h3>Python</h3>
-          <div class="skill-bar">
-            <div class="skill-fill" style="width: 70%;"></div>
-          </div>
+        <div class="skill-tag">
+          <svg viewBox="0 0 128 128" width="24" height="24">
+            <path fill="#003A2B"
+              d="M63.953.3C28.63.3.146 28.786.146 64.105S28.63 127.91 63.953 127.91c35.322 0 63.808-28.486 63.808-63.805S99.275.3 63.953.3zm27.218 99.249c-1.532 1.263-5.04 2.218-8.31 1.652L55.63 95.46l-10.604 12.884c-.652.793-1.581 1.228-2.418 1.532-.835.304-1.858.312-2.46-.024l-.652-14.466 38.004-44.082L39.216 65.39l-15.4-7.014c-.96-.435-1.018-1.525-.056-2.081L98.558 32.93c.9-.508 2.267.044 2.134 1.116l-7.267 63.627c-.12.956-.72 1.617-2.254 1.877z" />
+          </svg>
+          <span>Django</span>
         </div>
-        <div class="skill-card">
-          <div class="skill-icon">&#128451;</div>
-          <h3>Databases</h3>
-          <div class="skill-bar">
-            <div class="skill-fill" style="width: 75%;"></div>
-          </div>
+        <div class="skill-tag">
+          <svg viewBox="0 0 128 128" width="24" height="24">
+            <path fill="#714B67"
+              d="M124.205 60.165c-.387-4.41-4.076-7.647-8.506-7.648h-.008a8.534 8.534 0 00-6.026 2.5l-.034.033-14.063 14.132-31.486-17.792 30.095-16.892.09-.053a8.573 8.573 0 003.357-3.703c1.47-3.13 1.023-6.745-1.202-9.468l-.04-.05a8.556 8.556 0 00-6.638-3.135 8.564 8.564 0 00-4.129 1.064l-.07.039-14.482 8.198V11.9a8.55 8.55 0 00-4.74-7.7c-1.2-.6-2.5-.9-3.83-.9-2.86 0-5.42 1.36-7.01 3.52l-.04.05-4.31 5.92-4.34-5.95-.03-.04A8.56 8.56 0 0045.8 3.3c-1.33 0-2.63.3-3.83.89a8.55 8.55 0 00-4.74 7.7v15.26L23.59 18.89l-.07-.04a8.49 8.49 0 00-4.13-1.06 8.56 8.56 0 00-6.64 3.14l-.04.05c-2.22 2.72-2.67 6.34-1.2 9.46a8.57 8.57 0 003.36 3.71l.09.05 30.1 16.89L13.57 69.05l-.03.03a8.53 8.53 0 00-6.03 2.5l-.03.03c-2.05 2.16-3.11 4.98-2.89 7.72l.02.21c.14 1.55.65 3.04 1.52 4.35l.06.09 5.86 7.12-7.49 3.27-.11.05a8.55 8.55 0 00-4.89 8.51l.01.1c.35 3.42 2.57 6.26 5.72 7.41l.05.02 55.63 19.61.04.01c.93.28 1.83.42 2.7.42.34.01.67-.01 1-.05h.05c.33.04.67.06 1 .05.87 0 1.78-.14 2.71-.42l.04-.01 55.59-19.6h.01l.05-.02c3.15-1.15 5.37-3.98 5.72-7.41l.01-.1a8.55 8.55 0 00-4.89-8.51l-.11-.05-7.49-3.27 5.86-7.12.06-.09a8.33 8.33 0 001.52-4.34zM64.3 79.04l-14.05-7.95 14.05-14.12 14.23 14.29z" />
+          </svg>
+          <span>Odoo</span>
+        </div>
+       
+        <div class="skill-tag">
+          <svg viewBox="0 0 128 128" width="24" height="24">
+            <path fill="#F89939"
+              d="M63.634 0v38.344L36.2 56.842l-14.68-8.47V31.9L48.953 16.2V0L6.344 24.592v48.816L27.52 62.306v18.872L63.634 101.57V82.63L36.2 64.312l14.68-8.47 12.754 7.362 12.754-7.362 14.68 8.47L63.634 82.63v18.94l36.114-20.392V62.306l21.176 11.102V24.592L78.315 0v16.2L105.75 31.9v16.472l-14.68 8.47L63.634 38.344V0z" />
+          </svg>
+          <span>Scikit-learn</span>
+        </div>
+        <div class="skill-tag">
+          <svg viewBox="0 0 128 128" width="24" height="24">
+            <path fill="#FF6F00"
+              d="M86.5 52.5h-8.3v-8h8.3v8zm8 0H87v-8h7.5v8zm8 0h-7.5v-8H103v8zM87 61h-8.5v-8H87v8zm8 0h-7.5v-8H95v8zm8.5 0H95v-8h8.5v8zm-16 8.5H87V62h8v7.5z" />
+            <path fill="#FF6F00"
+              d="M64 .3C28.7.3 0 28.9 0 64.3s28.7 64 64 64 64-28.7 64-64S99.3.3 64 .3zm38 89.9H26V38h76v52.2z" />
+          </svg>
+          <span>TensorFlow</span>
+        </div>
+        <div class="skill-tag">
+          <svg viewBox="0 0 128 128" width="24" height="24">
+            <path fill="#EE4C2C"
+              d="M99.59 36.83a37.17 37.17 0 01.1 52.47l-25 25.05a37.12 37.12 0 01-52.54 0l25.08-25.08A18.59 18.59 0 0047.2 47.2a18.74 18.74 0 00-26.36 0L46 22.08a37.12 37.12 0 0152.54 0l.05.05 1 .7zm-3.98 26.27a7 7 0 10-7 7 7 7 0 007-7z" />
+          </svg>
+          <span>PyTorch</span>
+        </div>
+        <div class="skill-tag">
+          <svg viewBox="0 0 128 128" width="24" height="24">
+            <path fill="#F37626"
+              d="M64.1.3C28.8.3.3 28.8.3 64.1S28.8 127.9 64.1 127.9c35.3 0 63.8-28.5 63.8-63.8S99.4.3 64.1.3zm0 10.7c7.5 0 14.5 1.6 20.9 4.5a13 13 0 01-4.5 2.2c-5.2-2.3-10.8-3.6-16.4-3.6S52.8 15.4 47.6 17.7a13 13 0 01-4.5-2.2 53.2 53.2 0 0121-4.5zm0 106.8c-29.3 0-53.1-23.8-53.1-53.1 0-16.5 7.5-31.3 19.4-41.1a16 16 0 005 2.8c-9.8 8.6-16 21.3-16 35.3a49.8 49.8 0 0089.5 30A53 53 0 0164 117.8z" />
+            <circle fill="#F37626" cx="64" cy="58" r="10" />
+          </svg>
+          <span>Jupyter</span>
+        </div>
+        <div class="skill-tag">
+          <svg viewBox="0 0 128 128" width="24" height="24">
+            <path fill="#F34F29"
+              d="M124.742 58.378L69.625 3.264c-3.172-3.174-8.32-3.174-11.497 0L46.685 14.71l14.518 14.518c3.375-1.139 7.243-.375 9.932 2.314 2.703 2.706 3.462 6.607 2.293 9.993L87.42 55.529c3.385-1.167 7.292-.413 9.994 2.295 3.78 3.777 3.78 9.9 0 13.679a9.673 9.673 0 01-13.683 0 9.677 9.677 0 01-2.105-10.521L68.578 47.933l-.002 34.341a9.708 9.708 0 012.559 1.828c3.779 3.777 3.779 9.898 0 13.683-3.779 3.777-9.904 3.777-13.679 0-3.778-3.784-3.778-9.905 0-13.683a9.65 9.65 0 013.167-2.11V47.333a9.58 9.58 0 01-3.167-2.111c-2.862-2.86-3.551-7.06-2.083-10.576L41.056 20.333 3.264 58.123a8.133 8.133 0 000 11.5l55.117 55.114c3.174 3.174 8.32 3.174 11.499 0l54.858-54.858a8.135 8.135 0 00.004-11.501z" />
+          </svg>
+          <span>Git</span>
+        </div>
+       
+        <div class="skill-tag">
+          <svg viewBox="0 0 128 128" width="24" height="24">
+            <path fill="#336791"
+              d="M93.809 92.112c.785-6.533.55-7.492 5.416-6.433l1.235.108c3.742.17 8.637-.602 11.513-1.938 6.191-2.873 9.861-7.668 3.758-6.408-13.924 2.873-14.881-1.842-14.881-1.842 14.703-21.815 20.849-49.508 15.545-56.287-14.47-18.489-39.478-9.746-39.88-9.556l-.134.024c-2.751-.571-5.83-.912-9.289-.968-6.292-.104-11.07 1.654-14.677 4.237 0 0-44.59-18.387-42.514 23.138.442 8.842 12.672 66.898 27.26 49.362 5.332-6.412 10.484-11.834 10.484-11.834 2.558 1.7 5.622 2.567 8.834 2.255l.249-.212c-.078.796-.044 1.575.09 2.497-3.312 3.706-2.34 4.357-8.962 5.721-6.693 1.381-2.762 3.839-.194 4.482 3.114.781 10.323 1.887 15.199-4.942l-.22.895c1.47 1.177 2.507 7.637 2.334 13.506-.173 5.868-.356 9.917.837 13.086 1.193 3.169 2.383 10.306 12.54 8.193 8.498-1.768 12.908-6.352 13.514-13.995.431-5.434.915-4.63 1.058-9.484l.561-2.722c.648-5.466-.381-7.223 3.94-6.404z" />
+            <path fill="#336791"
+              d="M77.482 89.296c-.375 4.548-.378 9.143.266 13.739.192 1.373.622 3.265 1.632 4.131 1.01.866-1.191 5.545-3.013 6.699-1.822 1.155-3.592 2.178-3.592 1.07s.78-5.328.122-8.096c-.658-2.767-1.636-5.173-1.44-8.258.197-3.084.654-7.09-.452-9.285z" />
+          </svg>
+          <span>PostgreSQL</span>
+        </div>
+      
         </div>
       </div>
     </div>
   </section>
 
-<section id="projects" class="projects">
-  <div class="container">
-    <h2 class="section-title">My Projects</h2>
-
-    <div class="projects-grid">
-
-      <!-- Project 1: E-Commerce Website -->
-      <div class="project-card">
-        <div class="project-image">Fashion Store 🛍️</div>
-        <div class="project-info">
-          <h3>E-Commerce Website</h3>
-          <p>A full-featured online store with cart, checkout, and payment integration.</p>
-          <div class="project-tags">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">JavaScript</span>
-          </div>
-          <div class="project-links">
-            <a href="#" class="btn btn-small">Live Demo</a>
-            <a href="https://github.com/HaymiG/fashion-store" class="btn btn-small btn-outline" target="_blank">Source Code</a>
-          </div>
-        </div>
-      </div>
-
-
-      <!-- Project 2: Odoo Bookstore ERP -->
-      <div class="project-card">
-        <div class="project-image">Odoo Bookstore 📚</div>
-        <div class="project-info">
-          <h3>Odoo Bookstore Management</h3>
-          <p>
-            A comprehensive ERP module for bookstore management with advanced
-            features including computed fields, wizards, access control, and
-            automated processes.
-          </p>
-          <div class="project-tags">
-            <span class="tag">Odoo 17</span>
-            <span class="tag">Python</span>
-            <span class="tag">XML</span>
-            <span class="tag">PostgreSQL</span>
-            <span class="tag">JavaScript</span>
-          </div>
-          <div class="project-links">
-            <a href="#" class="btn btn-small">Live Demo</a>
-            <a href="https://github.com/HaymiG/bookstore" class="btn btn-small btn-outline" target="_blank">Source Code</a>
-          </div>
-        </div>
-      </div>
-
-     
-
-    </div> <!-- projects-grid -->
-  </div> <!-- container -->
-</section>
-
-
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
+  <!-- ========== EXPERIENCE ========== -->
+  <section class="section" id="experience">
     <div class="container">
-      <h2 class="section-title">Get In Touch</h2>
-      <div class="contact-grid">
-        <div class="contact-info">
-          <h3>Let's work together</h3>
-          <p>Feel free to reach out for collaborations or just a friendly hello!</p>
-          <div class="contact-details">
-            <div class="contact-item">
-              <span class="contact-icon">&#9993;</span>
-              <span>Haymig75@gmail.com</span>
-            </div>
-            <div class="contact-item">
-              <span class="contact-icon">&#9742;</span>
-              <span>+251 974 099 703</span>
-            </div>
-            <div class="contact-item">
-              <span class="contact-icon">&#128205;</span>
-              <span>Addis Ababa, Ethiopia</span>
-            </div>
-          </div>
-          <div class="social-links">
-            <a href="https://github.com/haymig" class="social-link" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/haymanot-getachew/" class="social-link">LinkedIn</a>
-            <!-- <a href="#" class="social-link">Twitter</a> -->
-          </div>
+      <h2 class="section-title"> Experience</h2>
+      <div class="section-divider"></div>
+      <div class="timeline">
+        <div class="timeline-item glass-card">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">July 2025 – September 2025</div>
+          <h3 class="timeline-title">Software Engineering Intern</h3>
+          <p class="timeline-company">ETTA Solutions PLC</p>
+          <ul class="timeline-details">
+            <li>Developed and customized Odoo 17 ERP modules</li>
+            <li>Built ERP system enhancements and e-commerce solutions</li>
+            <li>Developed a responsive e-commerce website with TeleBirr payment integration</li>
+            <li>Engineered a Bookstore Management module using Python and Odoo</li>
+            <li>Collaborated with developers to optimize existing modules</li>
+          </ul>
         </div>
-        <form class="contact-form" action="#" method="POST">
-          <div class="form-group">
-            <input type="text" name="name" placeholder="Your Name" required>
-          </div>
-          <div class="form-group">
-            <input type="email" name="email" placeholder="Your Email" required>
-          </div>
-          <div class="form-group">
-            <input type="text" name="subject" placeholder="Subject">
-          </div>
-          <div class="form-group">
-            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Send Message</button>
-        </form>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- ========== PROJECTS ========== -->
+  <section class="section section-alt" id="projects">
+    <div class="container">
+      <h2 class="section-title"> Projects</h2>
+      <div class="section-divider"></div>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card glass-card">
+          <div class="project-header">
+            <div class="project-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                width="32" height="32">
+                <path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+              </svg></div>
+            <a href="https://github.com/HaymiG/fashion_store" target="_blank" rel="noopener" class="project-github">View
+              on GitHub →</a>
+          </div>
+          <h3 class="project-title">🛒 Fashion Store – eCommerce Platform</h3>
+          <p class="project-description">Full-featured eCommerce platform using Odoo 17 enabling efficient product
+            management, order processing, and inventory control.</p>
+          <ul class="project-features">
+            <li>Real-time cart management</li>
+            <li>Smooth checkout system</li>
+            <li>Automated inventory updates</li>
+            <li>TeleBirr digital payment integration</li>
+          </ul>
+          <div class="project-tech"><span class="tech-tag">Odoo 17</span><span class="tech-tag">Python</span><span
+              class="tech-tag">XML</span><span class="tech-tag">JavaScript</span><span
+              class="tech-tag">PostgreSQL</span></div>
+        </div>
+        <!-- Project 2 -->
+        <div class="project-card glass-card">
+          <div class="project-header">
+            <div class="project-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                width="32" height="32">
+                <path
+                  d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
+              </svg></div>
+            <a href="https://github.com/HaymiG/Cinema_management" target="_blank" rel="noopener"
+              class="project-github">View on GitHub →</a>
+          </div>
+          <h3 class="project-title">🎬 BookYourShow – Cinema Management</h3>
+          <p class="project-description">Full-stack cinema management web application using Django to streamline ticket
+            booking and cinema operations.</p>
+          <ul class="project-features">
+            <li>Role-based access control (Users, Staff, Admins)</li>
+            <li>Secure authentication system</li>
+            <li>Movie schedule browsing</li>
+            <li>Booking history management</li>
+          </ul>
+          <div class="project-tech"><span class="tech-tag">Python</span><span class="tech-tag">Django</span><span
+              class="tech-tag">HTML/CSS</span><span class="tech-tag">JavaScript</span><span
+              class="tech-tag">SQLite</span></div>
+        </div>
+        <!-- Project 3 -->
+        <div class="project-card glass-card">
+          <div class="project-header">
+            <div class="project-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                width="32" height="32">
+                <path
+                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg></div>
+            <a href="https://github.com/HaymiG/Bookstore" target="_blank" rel="noopener"
+              class="project-github">View on GitHub →</a>
+          </div>
+          <h3 class="project-title">📚 Odoo Bookstore Management System</h3>
+          <p class="project-description">Advanced ERP-based bookstore module built with Odoo 17 for catalog management,
+            automated workflows, and operational efficiency.</p>
+          <ul class="project-features">
+            <li>Custom models &amp; dynamic age computation</li>
+            <li>Interactive Kanban with advanced filtering</li>
+            <li>Reporting module with export capability</li>
+            <li>Role-based access control</li>
+          </ul>
+          <div class="project-tech"><span class="tech-tag">Odoo 17</span><span class="tech-tag">Python</span><span
+              class="tech-tag">XML</span><span class="tech-tag">PostgreSQL</span><span
+              class="tech-tag">JavaScript</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EDUCATION ========== -->
+  <section class="section" id="education">
+    <div class="container">
+      <h2 class="section-title">Education</h2>
+      <div class="section-divider"></div>
+      <div class="education-card glass-card">
+        
+        <div class="education-info">
+          <h3>Adama Science and Technology University</h3>
+          <p class="education-degree">BSc in Computer Science and Engineering</p>
+          <p class="education-year">2023 – Present</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <h2 class="section-title"> Get In Touch</h2>
+      <div class="section-divider"></div>
+      <p class="contact-intro">I'm always open to discussing new opportunities, projects, and ideas. Feel free to reach
+        out!</p>
+      <div class="contact-content">
+        <div class="contact-form glass-card">
+          <h3>Send a Message</h3>
+          <form action="#" method="post">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+        <div class="contact-cards">
+        <a href="mailto:haymig75@gmail.com" class="contact-card glass-card">
+          
+          <h3>📧 Email</h3>
+          <p>haymig75@gmail.com</p>
+        </a>
+        <a href="tel:+251974099703" class="contact-card glass-card">
+         
+          <h3>📱 Phone</h3>
+          <p>+251 974 099 703</p>
+        </a>
+        <a href="https://www.linkedin.com/in/haymanot-getachew/" target="_blank" rel="noopener"
+          class="contact-card glass-card">
+          
+          <h3>🔗 LinkedIn</h3>
+          <p>haymanot-getachew</p>
+        </a>
+        <a href="https://github.com/HaymiG" target="_blank" rel="noopener" class="contact-card glass-card">
+         
+          <h3>🐙 GitHub</h3>
+          <p>HaymiG</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
   <footer class="footer">
-    <p>&copy; 2026 Haymanot Getachew. All rights reserved.</p>
+    <div class="container">
+      <div class="footer-content">
+        
+        <div class="footer-social">
+          <a href="https://github.com/HaymiG" target="_blank" rel="noopener" aria-label="GitHub"><svg
+              viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+            </svg></a>
+          <a href="https://www.linkedin.com/in/haymanot-getachew/" target="_blank" rel="noopener"
+            aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg></a>
+        </div>
+        <p class="footer-copy">&copy; 2026 Haymanot Getachew. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
-  
 
 </body>
+
 </html>
